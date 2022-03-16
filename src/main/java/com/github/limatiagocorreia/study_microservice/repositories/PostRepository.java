@@ -47,4 +47,9 @@ public class PostRepository {
         posts.removeIf(item -> item.getId().equals(post_id));
     }
 
+    public Long createPost(Post post) {
+        posts.add(post);
+
+        return post.getId();
+    }
 }

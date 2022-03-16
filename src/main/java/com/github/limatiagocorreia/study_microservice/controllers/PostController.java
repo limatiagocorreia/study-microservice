@@ -33,7 +33,8 @@ public class PostController {
     @PostMapping("create")
     public Long createPost(@RequestBody Post post){
         System.out.println("Criando o post " + post.toString());
-        return null;
+        return postsRepository.createPost(post);
+//        return null;
     }
 
     @PutMapping("update")

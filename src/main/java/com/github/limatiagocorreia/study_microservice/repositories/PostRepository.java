@@ -8,6 +8,7 @@ import java.util.List;
 public class PostRepository {
 
     private List<Post> posts;
+    private Long currentId = 3L;
 
     public PostRepository() {
         this.load();
@@ -48,8 +49,13 @@ public class PostRepository {
     }
 
     public Long createPost(Post post) {
+        post.setId(++this.currentId);
         posts.add(post);
-
         return post.getId();
+    }
+
+    public Post updatePost(Post post) {
+        posts.set(posts.indexOf(getById(post.getId())),post);
+        return post;
     }
 }

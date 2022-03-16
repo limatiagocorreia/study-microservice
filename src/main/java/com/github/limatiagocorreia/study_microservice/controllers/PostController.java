@@ -34,12 +34,11 @@ public class PostController {
     public Long createPost(@RequestBody Post post){
         System.out.println("Criando o post " + post.toString());
         return postsRepository.createPost(post);
-//        return null;
     }
 
     @PutMapping("update")
     public Post updatePost(@RequestBody Post post){
         System.out.println("Atualizando o post " + post.toString());
-        return null;
+        return postsRepository.updatePost(post);
     }
 }

@@ -55,7 +55,13 @@ public class PostRepository {
     }
 
     public Post updatePost(Post post) {
-        posts.set(posts.indexOf(getById(post.getId())),post);
-        return post;
+        for (Post p : posts){
+            if (p.getId().equals(post.getId())){
+                p.setAuthor(post.getAuthor());
+                p.setTitle(post.getTitle());
+                return p;
+            }
+        }
+        return null;
     }
 }

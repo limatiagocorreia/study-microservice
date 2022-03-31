@@ -1,7 +1,15 @@
-package com.github.limatiagocorreia.study_microservice;
+package com.github.limatiagocorreia.study_microservice.model;
 
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Post {
 
+    @Id
+    @GeneratedValue
     private Long id;
     private String title;
     private String author;
@@ -35,4 +43,5 @@ public class Post {
                 .concat(" - title = ").concat(title)
                 .concat(" - author = ").concat(author).concat(" }");
     }
+
 }

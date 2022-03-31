@@ -1,4 +1,4 @@
-package com.github.limatiagocorreia.study_microservice.controllers;
+package com.github.limatiagocorreia.study_microservice.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

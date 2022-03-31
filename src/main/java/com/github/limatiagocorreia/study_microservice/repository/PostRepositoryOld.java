@@ -1,16 +1,16 @@
-package com.github.limatiagocorreia.study_microservice.repositories;
+package com.github.limatiagocorreia.study_microservice.repository;
 
-import com.github.limatiagocorreia.study_microservice.Post;
+import com.github.limatiagocorreia.study_microservice.model.Post;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PostRepository {
+public class PostRepositoryOld {
 
     private List<Post> posts;
     private Long currentId = 3L;
 
-    public PostRepository() {
+    public PostRepositoryOld() {
         this.load();
     }
 

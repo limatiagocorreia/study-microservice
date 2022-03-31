@@ -25,7 +25,7 @@ public class PostController {
 
     @GetMapping("{post_id}")
     public Post getById(@PathVariable Long post_id) {
-        System.out.println("Listando o post de id= " + post_id);
+//        System.out.println("Listando o post de id= " + post_id);
         return postRepository.getById(post_id);
     }
 
@@ -37,7 +37,7 @@ public class PostController {
 
     @PostMapping("create")
     public Long createPost(@RequestBody Post post) {
-        System.out.println("Criando o post " + post.toString());
+//        System.out.println("Criando o post " + post.toString());
         return postRepository.save(post).getId();
     }
 
